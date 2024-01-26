@@ -192,3 +192,29 @@ document 객체의 역할은 아래와 같다.
 const title = document.getElementById("title")
 console.log(title.id);
 console.log(title.className);
+
+
+
+//prompt/////////////////////
+//prompt: 사용자에게 메세지를 보여주고 값을 받는 창
+const age1 = prompt("How old are you?");
+//console.log(age1); //입력받은 값
+//console.log(typeof age1) //입력받은 값의 타입
+
+//사용자가 입력한 값의 타입을 반환
+console.log(age1, parseInt(age1)); //텍스트 입력의 경우 : ㅁㄴㄹㅁㅇ NaN
+//isNaN: boolean 값을 반환
+//false : number값이 맞을때
+//true : String값이 맞을때
+console.log(isNaN(age1));
+
+//조건문//////////////////////
+if(isNaN(age1)){
+    //String값을 입력(true)하면 콘솔에 하단의 문구가 출력
+    console.log("Please write a number")
+}
+else{
+    //Number값을 입력(false)하면 콘솔에 하단의 문구가 출력
+    console.log("Thank you for writing your age!")
+}
+
