@@ -11,7 +11,7 @@ toBuy[2] = "pasta"; //kimbab -> pasta로 변경
 console.log(toBuy[2]); //pasta
 
 
-//객체(object) 생성////////////// 
+//객체(object) 생성///////////////////////// 
 const player = {
     name: "sally",
     points: 10,
