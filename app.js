@@ -176,7 +176,7 @@ console.log(hello2); //null : 비어있다는 의미
 
 
 //4day//////
-//document///////
+//document/////////
 /* 
 document는 DOM 트리의 최상위 객체이다.
 브라우저는 HTML 문서를 로드하기 전에 document 객체를 먼저 만든다.
