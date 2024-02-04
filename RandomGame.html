@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vanilla Challenge</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <script>
+      let targetNumber;
+
+      function startGame() {
+        const rangeInput = document.getElementById("rangeInput");
+        const selectedNumber = parseInt(rangeInput.value);
+
+        if (selectedNumber <= 0 || isNaN(selectedNumber)) {
+          alert("Please select a valid range greater than 0.");
+          return;
+        }
+
+        targetNumber = Math.floor(Math.random() * selectedNumber) + 1;
+        document.getElementById("result").innerText = "";
+      }
+
+      function checkGuess() {
+        const guessInput = document.getElementById("guessInput");
+        const userGuess = parseInt(guessInput.value);
+
+        if (isNaN(userGuess)) {
+          alert("Please enter a valid number.");
+          return;
+        }
+
+        const machineGuess = Math.floor(Math.random() * targetNumber) + 1;
+
+        document.getElementById(
+          "result"
+        ).innerText = `You chose: ${userGuess}, the machine chooses: ${machineGuess}`;
+
+        if (userGuess === machineGuess) {
+          document.getElementById("result").innerText += " - You win!";
+        } else {
+          document.getElementById("result").innerText += " - You lose!";
+        }
+      }
+
+      function playGame() {
+        const guessInput = document.getElementById("guessInput");
+
+        if (!guessInput) {
+          const newGuessInput = document.createElement("input");
+          newGuessInput.type = "number";
+          newGuessInput.id = "guessInput";
+          newGuessInput.min = "1";
+          newGuessInput.step = "1";
+          document.body.appendChild(newGuessInput);
+          newGuessInput.addEventListener("change", checkGuess);
+        }
+
+        // 게임 시작
+        startGame();
+        // 결과 확인
+        checkGuess();
+      }
+    </script>
+
+    <h1>Random Number Game</h1>
+    <h3>Generate a number between 0 and</h3>
+    <input type="number" id="rangeInput" min="1" step="1" />
+    <br />
+    <h3>Guess the number</h3>
+    <input type="number" id="guessInput" min="1" step="1" />
+    <button onclick="playGame()">Play!</button>
+    <p id="result"></p>
+  </body>
+</html>
