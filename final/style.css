@@ -8,17 +8,19 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  button {
+    font-size: 15px;
   }
   
   #clock {
     font-size: 2em;
     margin-bottom: 20px;
   }
-  
-  /* #login-form, #todo-list, #background-image, #weather-info {
-    /* 각각의 섹션에 대한 스타일링 
-  } */
-  
   .hidden{
     display: none;
   }
