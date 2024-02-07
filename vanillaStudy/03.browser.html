@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#JAVASCRIPT ON THE BROWSER</title>
+<style>
+    body{
+    background-color: beige;
+}
+</style>
+</head>
+<body>
+    <h1 autofocus id="title" class="hello">Grab Me!</h1>
+    <h2>#JAVASCRIPT ON THE BROWSER</h2>
+    <!-- JAVASCRIPT는 Document와 연결되어 있다. 최상위 객체-->
+
+<script>
+    const title = document.getElementById("title");
+    title.innerText = "Got you!";
+
+    console.dir(title);
+</script>
+</body>
+</html>

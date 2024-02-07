@@ -209,12 +209,50 @@ console.log(age1, parseInt(age1)); //텍스트 입력의 경우 : ㅁㄴㄹㅁ�
 console.log(isNaN(age1));
 
 //조건문//////////////////////
+//JavaScript는 작은 괄호부터 실행 , 위에서 아래로 실행
 if(isNaN(age1)){
-    //String값을 입력(true)하면 콘솔에 하단의 문구가 출력
-    console.log("Please write a number")
+    //String값을 입력(true)하면 콘솔에 하단의 문구가 출력 (true)
+    console.log("Please write a number");
+    alert("정확한 나이를 입력해 주세요");
 }
 else{
-    //Number값을 입력(false)하면 콘솔에 하단의 문구가 출력
-    console.log("Thank you for writing your age!")
+    //Number값을 입력(false)하면 콘솔에 하단의 문구가 출력 (false)
+    console.log("Thank you for writing your age!");
+    alert("나이를 알려주셔서 감사합니다+_+");
 }
 
+// 다양한 조건 넣기
+// 조건1: String 값을 입력했을때
+if(isNaN(age1)){
+    console.log("Please write a number(isNaN)");
+}
+// 나이가 18세 미만일때
+else if(age1 < 18){
+    console.log("You are too young.(age1 < 18)");
+} 
+// &&(and): 두가지 조건 중 하나라도 false 일 경우 반환값은 false
+// 즉 두가지 조건 모두 true 를 충족해야 true 값을 반환 함
+else if(age1 >= 18 && age1 <=50){
+    console.log("You can drink(&&)");
+}
+// ||(or): 두가지 조건 중 하나라도 true 일 경우 반환값은 true
+// 두가지 조건 모두 false일 경우 반환값은 false
+// else if(age1 >= 18 || age1 <=50){
+//     console.log("You can drink(||)");
+// }
+// 나이가 80세 이상일 때
+// else if(age1 > 80){
+//     console.log("You can do whatever you want.(age1 > 80)");
+// }
+// age1 이 100 인지를 체크
+else if(age1 === 100){
+    console.log("wow you wise(===)");
+}
+// age1 이 100이 아닌지를 체크
+else if(age1 !== 100){
+    console.log("wow you wise(!==)");
+}
+// 나이가 18세 이상일떄 // else는 선택사항!
+// else{
+//     console.log("You can drink(else)");
+// } 
